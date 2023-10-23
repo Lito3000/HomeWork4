@@ -19,6 +19,9 @@ main h1 {
     display: flex;
     margin: 90px 0 0 0;
 }
+ul li a:hover{
+    color: yellow;
+}
 header{
     padding: 20px 0 0 0;
 }
@@ -41,6 +44,7 @@ header li a {
     text-decoration: none;
     transition: color 0.2s linear;
     padding: 30px 13px 30px 13px;
+
 }
 header li a:hover{
     background-color: #fd2d2d;
@@ -141,4 +145,71 @@ button{
 .containe-flex4{
     display: flex;
     padding: 0 0 24px 0;
+}
+.containe-text2{
+    margin: 50px 0 0 0;
+}
+.main-menu-next{
+    display: flex;
+}
+.containe-flex5{
+    display: flex;
+}
+.color__text4{
+    font-size: 15px;
+    line-height: 21px;
+    background: #f7f7f7;
+    color: #222;
+    line-height: 18px;
+    margin-bottom: 18px;
+    padding: 3.5em;
+    margin: 0px 16px 0 0;
+    text-align: center;
+
+}
+.containe-flex6{
+    font-size: 15px;
+    line-height: 21px;
+    background: #f7f7f7;
+    color: #222;
+    line-height: 18px;
+    margin-bottom: 18px;
+    padding: 15.5em;
+    margin: 0px 16px 0 0;
+    text-align: center;
+}
+.container2{
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+   background-color: #f4efdc;
+    padding: 118px 0 118px 0;
+}
+.container-1{
+    display: flex;
+    padding: 0px 0px 0px 300px;
+}
+.button3{
+    color: #FFF;
+    background-color: #fd2d2d;
+    border-color: #fd2d2d;
+    width: 94%;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 5px;
+    margin: 0 0 1px 11px;
+}
+input{
+    padding: 18px 32px 0px 24px;
+
 }
