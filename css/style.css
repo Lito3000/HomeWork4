@@ -37,23 +37,23 @@ a {
 .header{
     padding-top: 30px;
 }
-.org__content{
+.org__content,.chapter__info{
     display: flex;
     /*align-items: center;*/
 }
-.org__info, .org__video{
+.org__info, .org__video,.chapter__divide,.chapter__container{
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.org{
+.org,.chapter{
     padding: 50px 0 50px 0;
 }
 .header,.org{
     background-color: #f5f1f1;
 }
-.org__info p {
+.org__info p , .chapter__container p ,.chapter__divide p,.chapter__divide h3{
     color: #6f6d6d;
     max-width: 80%;
 }
@@ -80,9 +80,16 @@ a {
     box-shadow: 0 0 20px 1px #000009cc;
     border-radius: 10px;
 }
-.chapter__info{
+.manadgement,.Logo{
     display: flex;
 }
-.chapter__divide{
-    display: flex;
-}
+/*.chapter__divide{*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    align-items: center;*/
+/*}*/
+/*.chapter__container{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-around;*/
+/*}*/
