@@ -19,7 +19,7 @@ a {
     background-color: #313030;
 
 }
-.header__menu ul {
+.header__menu ul,.product__menu ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -37,11 +37,10 @@ a {
 .header{
     padding-top: 30px;
 }
-.org__content,.chapter__info{
+.org__content,.chapter__content,.manadgement,.Logo{
     display: flex;
-    /*align-items: center;*/
 }
-.org__info, .org__video,.chapter__divide,.chapter__container{
+.org__info,.org__video,.chapter__info,.chapter__divide{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -53,9 +52,10 @@ a {
 .header,.org{
     background-color: #f5f1f1;
 }
-.org__info p , .chapter__container p ,.chapter__divide p,.chapter__divide h3{
+.org__info p , .chapter__info p ,.chapter__divide p,.chapter__divide h3 ,
+.product__info h1 ,.product__info p{
     color: #6f6d6d;
-    max-width: 80%;
+    max-width: 100%;
 }
 .org__info a{
     padding: 14px 51px;
@@ -71,23 +71,14 @@ a {
 .org__info a:hover{
     background-color: #ff1313;
 }
-.chapter__container a:hover{
+.chapter__info a:hover{
     background-color: #ff1313;
-}
-.org__info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 .org__video iframe{
     box-shadow: 0 0 20px 1px #000009cc;
     border-radius: 10px;
 }
-.manadgement,.Logo{
-    display: flex;
-}
-
-.chapter__container a{
+.chapter__info a{
     color: #fb2d2d;
     background-color: #fdfdfd;
     box-sizing: border-box;
@@ -102,4 +93,17 @@ a {
     border-radius: 10px;
     transition: 0.3s;
     box-shadow: 0 0 20px 1px rgba(248, 2, 27, 0.89);
+}
+.product__info{
+text-align: center;
+}
+.product__menu a{
+    padding: 40px 20px 40px 20px;
+    color: #6f6d6d;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.product__menu a:hover{
+   color: red;
 }
