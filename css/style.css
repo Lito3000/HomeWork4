@@ -37,14 +37,38 @@ a {
 .header,.product__add,.product__content{
     padding-top: 30px;
 }
-.org__content,.chapter__content,.manadgement,.Logo{
+.org__content,.services__content,.Logo{
     display: flex;
 }
-.org__info,.org__video,.chapter__info,.chapter__divide{
+.org__info,.org__video{
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+.services__major,.services__minor{
+    width: 50%;
+    display: flex;
+}
+.services__minor{
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-between;
+}
+.services__major{
+    gap:50px;
+    flex-direction: column;
+    /*padding-right: 100px;*/
+}
+/*свойство flex-wrap: wrap заставляет диспей флэксу увидеть ширину элемента*/
+.services__minor-service{
+    width: calc(50% - 25px);
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.services__minor-service img{
+    max-width: 40px;
 }
 .org,.chapter,.product{
     padding: 50px 0 50px 0;
@@ -52,10 +76,23 @@ a {
 .header,.org{
     background-color: #f5f1f1;
 }
-.org__info p , .chapter__info p ,.chapter__divide p,.chapter__divide h3 ,
-.product__info h1 ,.product__info p,.product__add p,.product__add h1,.color__text{
+.container h2,.container h4{
+    color: white;
+    text-align: center;
+}
+.org__info p , .services__major p ,.services__minor p,.services__minor h3 ,
+.product__info h1 ,.product__info p,.product__add p,.product__add h1,.color__text,
+.services__major h2{
     color: #6f6d6d;
     max-width: 100%;
+
+}
+.services__major h2{
+    font-size: 37px;
+    text-align: revert;
+}
+.services__major p{
+    width: 94%;
 }
 .org__info a{
     padding: 14px 51px;
@@ -71,14 +108,16 @@ a {
 .org__info a:hover{
     background-color: #ff1313;
 }
-.chapter__info a:hover{
+.services__major a:hover{
     background-color: #ff1313;
+    color: white;
+    box-shadow: 0 0 0 2px #e71111 inset, 0 0 0 4px white inset;
 }
 .org__video iframe{
     box-shadow: 0 0 20px 1px #000009cc;
     border-radius: 10px;
 }
-.chapter__info a{
+.services__major a{
     color: #fb2d2d;
     background-color: #fdfdfd;
     box-sizing: border-box;
@@ -86,13 +125,13 @@ a {
     letter-spacing: .1rem;
     text-transform: uppercase;
     text-decoration: none;
-    white-space: nowrap;
     padding: 14px 51px;
     font-weight: bold;
     font-size: 12px;
     border-radius: 10px;
     transition: 0.3s;
     box-shadow: 0 0 20px 1px rgba(248, 2, 27, 0.89);
+
 }
 .product__info{
 text-align: center;
@@ -190,10 +229,8 @@ textarea {
     padding-bottom: 100px;
     margin-top: 100px;
 }
-.container h2,.container h4{
-    color: white;
-    text-align: center;
-}
+
+
 .border{
     display: flex;
     justify-content: center;
