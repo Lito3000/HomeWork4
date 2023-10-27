@@ -40,6 +40,17 @@ a {
 .org__content,.services__content,.Logo{
     display: flex;
 }
+.services__content{
+    flex-wrap: wrap;
+}
+.services__content:after{
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #6f6d6d;
+    width: 100%;
+    margin-top: 100px;
+}
 .org__info,.org__video{
     width: 50%;
     display: flex;
