@@ -4,6 +4,10 @@ h1{
     line-height: 60px;
     text-transform: uppercase;
 }
+label{
+    /*display: inline-block;*/
+
+}
 a {
     display: inline-block;
     text-decoration: none;
@@ -64,6 +68,7 @@ a {
     flex-wrap: wrap;
     row-gap: 20px;
     justify-content: space-between;
+    /*gap: 30px;*/
 }
 .services__major{
     gap:50px;
@@ -79,7 +84,8 @@ a {
 .services__minor-service img{
     max-width: 40px;
 }
-.org,.chapter,.product{
+.org,.chapter,.product,
+.team,.newsletter,.contact{
     padding: 50px 0 50px 0;
 }
 .header,.org{
@@ -99,10 +105,11 @@ a {
     font-size: 37px;
     text-align: revert;
 }
-.services__major p,.team__description ,.org__info p{
+.services__major p,.team__sub p,.org__info p{
     width: 500px;
 }
 .org__info a{
+    border: none;
     padding: 14px 51px;
     background-color: #fd3f40;
     color: white;
@@ -126,6 +133,7 @@ a {
     border-radius: 10px;
 }
 .services__major a{
+    border: none;
     color: #fb2d2d;
     background-color: #fdfdfd;
     box-sizing: border-box;
@@ -187,7 +195,9 @@ text-align: center;
 .feauter__gallary__content{
     display: flex;
     flex-wrap: wrap;
-    gap:20px
+    /*gap:20px;*/
+    row-gap: 20px;
+    justify-content: space-between;
 }
 .feauter__gallary__item{
     width: calc(1160px/4) ;
@@ -211,10 +221,10 @@ text-align: center;
 .team__body{
     display: flex;
     flex-wrap: wrap;
-    gap:42px;
+    gap:50px;
 }
 .team__main{
-    width: calc(31% - 75px/2);
+    width: calc(27% - 75px/2);
     background-color: #679acb;
     background-repeat: no-repeat;
     background-size: cover;
@@ -224,8 +234,10 @@ text-align: center;
     font-size: 26px;
 }
 .team__sub{
+    /*Если мы не зададим ширину  team__sub width: calc(75% - 75px/2) то контейнер разширится автоматически по тексту*/
+    /*зафиксируется и не даст нижним блокам раздвинутся */
+    /*в принципе нижние блоки растянутся сами если им задать ширину*/
     /*width: calc(75% - 75px/2);*/
-    /*width: 838px;*/
     display: flex;
     gap: 30px;
     flex-direction: column;
@@ -245,8 +257,171 @@ text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.team__members{
+    display: flex;
+    /*gap: 20px;*/
+    width: 878px;
+    justify-content: space-between;
+}
 .team__member{
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: flex-end;
+
+}
+.team__member:hover .team__member__name{
+    opacity: 1;
+}
+.team__member__name{
+    background-color: rgba(49, 48, 48, 0.32);
+    width: 100%;
+    opacity: 0;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+.team__member a{
+    /*padding: 40px 20px 40px 20px;*/
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.team__member a:hover{
+    background-color: red;
+}
+.newsletter{
+    background-color: #333;
+    color: white;
+    background-image: url("https://images.unsplash.com/photo-1507371341162-763b5e419408?q=80&w=1339&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-attachment: fixed;
+}
+.newsletter__title{
+    display: flex;
+    gap: 33px;
+    flex-direction: column;
+    margin-bottom: 65px;
+}
+.button__letter{
+    border: none;
+    padding: 14px 51px;
+    background-color: #fd3f40;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px 1px #000009cc;
+}
+.button__letter:hover{
+    background-color: red;
+}
+.newsletter form input{
+    padding: 15px 35px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+.newsletter form label{
+    display: inline-block;
+    width: 100%;
+}
+.newsletter form{
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+}
+.contact{
+    padding: 80px 0 50px;
+    overflow: hidden;
+    /*свойство overflow позволяет создать не зависимый блок родительского блока */
+}
+.contact,.block__header{
+    margin-bottom: 100px;
+}
+.contact form{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: row;
+    /*row-gap: 20px;*/
+    /*column-gap: 40px;*/
+    gap: 40px;
+    /*width: 50%;*/
+    width: calc(60% - 50px);
+}
+.contact__inp{
+    width: calc(50% - 20px);
+}
+.contact__inp input{
+    width: 100%;
+}
+.contact__textaria{
+    height: 250px;
+    width: 100%;
+}
+.contact__info{
+    display: flex;
+    flex-wrap: wrap;
+    gap:100px
+}
+.contact__textaria textarea{
+    resize: none;
+    height: 100%;
+    width: 100%;
+}
+.contact__inp input,.contact__textaria textarea{
+    border: none;
+    border-radius: 10px;
+    background-color: #f5f1f1;
+    padding: 15px 30px;
+    outline: none;
+}
+.button__contact{
+    width: 100%;
+    border: none;
+    padding: 14px 51px;
+    background-color: #fd3f40;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px 1px #000009cc;
+}
+.button__contact:hover{
+    background-color: red;
+}
+.contact_address{
+color: white;
+    background-color: #6f6d6d;
+    width: calc(40% - 50px);
+    padding-left: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+.contact__info{
+    position: relative;
+}
+.contact__info:after{
+    content: '';
+    display: block;
+    width: calc(50vw - 640px);
+    height: 100%;
+    background-color: #6f6d6d;
+    position: absolute;
+    left: 100%;
 }
